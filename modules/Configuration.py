@@ -2,8 +2,9 @@
 from ConfigParser import SafeConfigParser
 import json
 from decimal import Decimal
+import os
 
-config = SafeConfigParser()
+config = SafeConfigParser(os.environ)
 Data = None
 FULL_LIST = ['STR', 'BTC', 'BTS', 'CLAM', 'DOGE', 'DASH', 'LTC', 'MAID', 'XMR', 'XRP', 'ETH', 'FCT']
 # This module is the middleman between the bot and a SafeConfigParser object, so that we can add extra functionality

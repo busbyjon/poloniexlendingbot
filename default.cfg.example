@@ -1,8 +1,8 @@
 # Need help configuring? View the Documentation: https://poloniexlendingbot.readthedocs.io/en/latest/configuration.html
 
 [API]
-apikey = YourAPIKey
-secret = YourSecret
+apikey = %(api)s
+secret = %(secret)s
 
 [BOT]
 #Sleeps between active iterations, time in seconds (1-3600)
