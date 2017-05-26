@@ -1,6 +1,6 @@
-FROM python:2.7-slim
+FROM busbyjon/armv6-python:2
 
-# cross-compile-start
+RUN [ "cross-build-start" ]
 
 WORKDIR /usr/src/app
 
@@ -11,7 +11,7 @@ COPY . .
 
 EXPOSE 8000
 
-# cross-compile-end
+RUN [ "cross-build-end" ]
 
 CMD ["python","lendingbot.py"]
 
