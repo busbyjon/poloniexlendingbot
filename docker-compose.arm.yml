@@ -7,13 +7,10 @@
 version: '2'
 services:
   bot:
-   image: python:2.7-slim
+   image: busbyjon/poloniexlendingbot:arm
    restart: always
-   working_dir: /usr/src/app/
    ports:
-   - "0.0.0.0:8000:8000"
-   volumes:
-   - "./:/usr/src/app"
-   command: bash -c "pip --no-cache-dir install -r requirements.txt && python lendingbot.py"
+    - "0.0.0.0:8000:8000"
+   env_file: ../secrets-bot.env
 
 # copy complete repository and change the host port (8000 in 0.0.0.0:8000) for additional bots
